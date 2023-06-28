@@ -1,0 +1,112 @@
+/*
+Die verschiedenen Selektoren
+
+.Class
+* => Universal
+p Element
+#Id
+*/
+
+h2#first-article {
+    color: blue;
+}
+
+h2 {
+    color: red;
+}
+
+#first-article {
+    color: chartreuse;
+}
+
+h2#first-article {
+    color: blueviolet;
+    font-size: 24px;
+}
+
+li, p {
+    color:rgba(13,12,12,0.779);
+}
+
+nav li {
+    list-style-type: none;
+}
+
+li>a {
+    color: red;
+}
+
+h2 + p {
+    color: red;
+}
+
+h2 ~ p {
+    color: blue;
+}
+
+a[href="#"] {
+    color: tomato;
+}
+
+/*
+    Pseudoelemente
+*/
+
+li>a::before {
+    content: "Ich bin before ";
+}
+
+li>a::after {
+    content: " Ich bin ein after";
+}
+
+h2#first-article::first-letter {
+    font-size: 48px;
+}
+
+h2+p::first-line {
+    background-color: aquamarine;
+}
+
+p::selection {
+    background-color: yellow;
+}
+
+#input1::placeholder {
+    color: teal;
+}
+
+article li::marker {
+    content: "Test";
+}
+
+:root {
+    font-size: large;
+}
+
+*:hover {
+    color: pink;
+}
+
+li:first-child {
+    color: chartreuse;
+}
+li:last-child {
+    color: chartreuse;
+}
+li:first-child:hover {
+    color:blue;
+}
+
+/*li:nth-child(even) {
+    background-color: blueviolet;
+}
+
+li:nth-child(odd) {
+    background-color: orange;
+}*/
+
+li:nth-child(2n+4)
+{
+    background-color: orange;
+}

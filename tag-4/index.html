@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Emmet</title>
+</head>
+<body>
+    <h1>Emmet</h1>
+    <section>
+        <article>
+            <h2>Was ist Emmet?</h2>
+            <p>Kurzform um HTML zu schreiben, Schneller und einfacher als alles selbst zu tippen. Früher bekannt als Zen-Coding</p>
+            <h3>
+                Wie funktioniert es?
+            </h3>
+            <p>Ich schreibe den Elements-Namen und drücke tab</p>
+            <h3>Emmet-Syntax</h3>
+            <ul>
+                <li>elementName + Tab => Erstellt öffnenden und (falls nötig) schließenden Tag</li>
+                <li>elementName.className + Tab => Erstellt Tag mit entsprechender Klasse </li>
+                <li>elementName#idName + Tab => Erstellt Tag mit entsprechender ID</li>
+                <li>element1>element2 + Tab => Erstellt element2 als Child von element1</li>
+                <li>element1+element2 + Tab => Erstellt element 1 und element2 als Siblings, also auf der selben Stufe</li>
+                <li>element1>element2^element3 + Tab => element3 wird auf der selben Ebene wie element1 erstellt</li>
+                <li>element1*n + Tab => Erstellt element1 n-Mal</li>
+                <li>element1>(element2+element3)*4 + Tab => würde viermal element2 benachbart von element3 innerhalb von element1 erstellen</li>
+                <li>element1[attribut=Wert] + Tab => Erstellt das Element mit dem entsprechenden Attribut</li>
+                <li>element1#test@n*3 beispiel + Tab => Erstellt element1 3mal mit Nummerierung und n als Startzahl. Vor dem n kann noch ein Minus stehen, dann würde
+                    n die Endzahl sein. Steht das Minus alleine wird absteigend nummeriert
+                    <element1 id="test17"></element1>
+                    <element1 id="test27"></element1>
+                    <element1 id="test37"></element1>
+                </li>
+                <li>element1#$test + Tab => Stellt uns Nummerierung zur Verfügung, meistens in Kombi mit Multiplikator benutzt</li>
+                <li>element1{text} + Tab => Erstellt element1 mit dem entsprechenden Text</li>
+                <li>Bei lorem kann ich direkt hinter lorem eine Zahl schreiben, also ohne das Mal-Zeichen, und dann werden wir entsprechend viele Wörter generiert</li>
+            </ul>
+        </article>
+        <article>
+            Lorem ipsum dolor sit amet.
+            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quia sint delectus qui ex sequi, molestiae rem accusantium? Pariatur alias eaque itaque quis? Quod atque
+                 necessitatibus vero quasi praesentium maiores
+                 quae eos culpa aliquid magni fugiat eaque enim quaerat eius inventore, provident dolor assumenda totam repellat cumque dolore! Hic, numquam dolore!</p>
+
+        </article>
+        <article>
+            <!-- map-Tag -->
+            <p>Der map-Tag bietet uns die Möglichkeit ein Bild in mehrere Bereiche einzuteilen und diese Bereiche zu verschiedenen Links zu leiten.
+                Dabei müssen wir aufpassen, dass wir die richtigen attribute verwenden, da das Bild selber auch noch das Attribut usemap="#nameDerMap"
+                enthalten muss. Der map-Tag enthält mehrere area-Tags. Diese haben folgende Attribute:
+            </p>
+            <ul>
+                <li>shape-Attribut:</li>
+                <ul>
+                    <li>rect, Viereckiger Bereich</li>
+                    <li>circle, Runder Bereich</li>
+                    <li>polygon, Vieleck</li>
+                    <li>default, => rect</li>
+                </ul>
+                <li>
+                    coords, verhalten sich je nach shape unterschiedlich:
+                    <ul>
+                        <li>Rect: coords="x1, y1(obere linke Eck), x2, y2(rechte untere Eck)"</li>
+                        <li>Circle: coords="x1, y1(Mittelpunkt des kreises),r(Radius)"</li>
+                        <li>Polygon: coords="x1, y1(erstes Eck), x2, y2(zweites Eck)........</li>
+                    </ul>
+                </li>
+                <li>href, Link wo bei klick hingeführt wird</li>
+                <li>alt, Text der angezeigt wird wenn ich über dem Bereich hovere</li>
+            </ul>
+            <img src="https://via.placeholder.com/250x250" usemap="#exMap">
+            <map name="exMap">
+                <area shape="rect" href="https:wikipedia.de" coords="125,125,250,250" alt="Wikipedia">
+                <area shape="rect" coords="125,125,250,250" href="https://ppedv.de" alt="PPEDV">
+            </map>
+        </article>
+    </section>
+</body>
+</html>
