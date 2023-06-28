@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cookies</title>
+    <script src="/tag-5/cookies.js" defer></script>
+    <!--
+        Ohne Attribut: Html parsing stoppt während script download und script wird sofort ausgeführt
+         => Elemente können fehlen
+
+        async - Erlaubt das gleichzeitige runterladen von HTML und Script, Script wird nach fertigem download ausgeführt
+         => Kann sein, dass Elemente noch fehlen
+
+        defer - weist den Browser an das Skript erst nach dem HTML geladen hat und dann auszuführen 
+        => Alle Elemente sind vorhanden 
+    -->
+
+</head>
+<body>
+    <h1>Cookies</h1>
+    <p>Kleine Textdateien, die Infos über den user speichern und an den Server weitergeben können.</p>
+    <p>Können eine Gültigkeitsdauer erhalten oder aber für die Dauer der Session, also bis der User 
+        den Browser schließt, gepsichert werden.
+    </p>
+
+    <h2>Cookies:</h2>
+    <p id="output"></p>
+    <button id="showCookies">Cookies Anzeigen</button>
+    <button id="deleteCookies">Cookies löschen</button>
+    <section class="cookie-banner">
+        <span>Dürfen cookies gesetzt werden?</span>
+        <button id="consent">Ja</button>
+    </section>
+</body>
+</html>
